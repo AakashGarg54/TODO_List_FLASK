@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block title %} HOME {% endblock title%}
+{% block body %}
+<h2>Your Todos</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Sno</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    {% for todo in alltodos %}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.desc}}</td>
+        <td>{{todo.date}}</td>
+        <td>
+            <a href="/update/{{todo.sno}}" type="button" class="btn btn-sm btn-outline-dark">Update</a>
+        </td>
+        <td>
+            <a href="/delete/{{todo.sno}}" type="button" class="btn btn-sm btn-outline-dark">delete</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% endblock body %}
