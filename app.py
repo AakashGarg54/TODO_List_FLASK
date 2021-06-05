@@ -23,7 +23,7 @@ def todo_show():
     allrows = Todo.query.all()
     if len(allrows) == 0:
             return render_template('empty.html')
-    return render_template('showTodo.html', alltodos=allrows)
+    return render_template('showtodo.html', alltodos=allrows)
 
 
 @app.route('/add', methods=['GET', 'POST'])
