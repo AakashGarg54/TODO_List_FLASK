@@ -13,20 +13,6 @@
             <th scope="col">Delete</th>
         </tr>
     </thead>
-    {% for todo in alltodos %}
-    <tr>
-        <td>{{loop.index}}</td>
-        <td>{{todo.title}}</td>
-        <td>{{todo.desc}}</td>
-        <td>{{todo.date}}</td>
-        <td>
-            <a href="/update/{{todo.sno}}" type="button" class="btn btn-sm btn-outline-dark">Update</a>
-        </td>
-        <td>
-            <a href="/delete/{{todo.sno}}" type="button" class="btn btn-sm btn-outline-dark">delete</a>
-        </td>
-    </tr>
-
-    {% endfor %}
+    c
 </table>
 {% endblock body %}
