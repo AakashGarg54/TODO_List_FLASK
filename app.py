@@ -17,15 +17,6 @@ class Todo(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
 
-
-@app.route('/')
-def todo_show():
-    allrows = Todo.query.all()
-    if len(allrows) == 0:
-            return render_template('empty.html')
-    return render_template('showtodo.html', alltodos=allrows)
-
-
 @app.route('/add', methods=['GET', 'POST'])
 def todo_add():
     if request.method == 'POST':
@@ -66,6 +57,13 @@ def todo_update(sno):
         
     row =  Todo.query.filter_by(sno=sno).first()
     return render_template('updatetodo.html', todo=row)
+
+@app.route('/')
+def todo_show():
+    allrows = Todo.query.all()
+    if len(allrows) == 0:
+            return render_template('empty.html')
+    return render_template('showtodo.html', alltodos=allrows)
 
 
 if __name__ == '__main__':

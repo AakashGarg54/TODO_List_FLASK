@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #000;
+}
+::-webkit-scrollbar-thumb{
+    background: #f1f1f1;
+    border-radius: 200px;
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #b3b0b0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.mobile {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 40px;
+    font-weight:900;
+    animation: pop 2.5s ease-in infinite alternate;
+}
+
+@keyframes pop {
+    0%{
+        font-size:10px;
+    }
+    100%{
+        font-size:40px;
+    }
+    
+}
+
+header nav,
+footer {
+    height: 10vh;
+    display: flex;
+    width: 100vw !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    min-height: 77vh;
+}
+
+.btn-1,
+.btn-2 {
+    width: 15vw;
+    height: 3vw;
+}
+
+.btn-1 {
+    margin: 2vw 0 0 27vw !important;
+}
+
+.btn-2 {
+    margin: 2vw 0 0 16vw !important;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    box-shadow: 0 0 12px rgb(35 173 255);
+
+}
+
+.para {
+    font-size: 15px;
+}
+
+img {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 25vw;
+}
+
+.btn-1,
+.btn-2 {
+    width: 15vw;
+    height: 3vw;
+}
+
+.btn-1 {
+    margin: 2vw 0 0 27vw !important;
+}
+
+.btn-2 {
+    margin: 2vw 0 0 16vw !important;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    box-shadow: 0 0 12px rgb(35 173 255);
+
+}
+
+.error {
+    min-height: 56vh;
+}
+
+/* Demo */
+/* Color Variables */
+/* Social Icon Mixin */
+/* Social Icons */
+.social-media-div {
+    font-size: 1.8em;
+}
+
+.social-media-div p,
+.social-media-footer p {
+    margin: 0 0.1em;
+}
+
+.social-media-div .icon-button {
+    margin-bottom: 10px;
+}
+
+.social-media-div .icon-button i {
+    color: white;
+    border-radius: 2.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2.6rem;
+    margin-bottom: 10px;
+    transition: 0.2s ease-in;
+}
+
+.facebook i {
+    background-color: #3b5998;
+}
+
+.linkedin i {
+    background-color: #0e76a8;
+}
+
+.github i {
+    background-color: #333;
+}
+
+.gitlab i {
+    background-color: #fca326;
+}
+
+.google i {
+    background-color: #ea4335;
+}
+
+.twitter i {
+    background-color: #1da1f2;
+}
+
+.whatsapp i {
+    background-color: #25D366;
+}
+
+.instagram i {
+    background-image: linear-gradient(to bottom left, #8a3ab9, #e95950, #fbad50);
+
+}
+
+/* Hover Transition */
+.twitter i:hover,
+.google i:hover,
+.gitlab i:hover,
+.github i:hover,
+.linkedin i:hover,
+.facebook i:hover,
+.instagram i:hover,
+.whatsapp i:hover,
+.stack-overflow i:hover,
+.medium i:hover {
+    background-color: black;
+    background-image: linear-gradient(black, black)
+}
+
+/* Media Query */
+@media (max-width: 999px) {
+
+    .navbar,
+    .body,
+    .footer {
+        display: none !important;
+    }
+
+    .mobile {
+        display: inline-flex ;
+    }
+
+}

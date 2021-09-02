@@ -1,18 +1,27 @@
 {% extends "index.html" %}
 {% block title %} HOME {% endblock title%}
 {% block body %}
-<h2>Your Todos</h2>
-<table class="table table-striped">
+<h2 class="my-3">Your Todos</h2>
+<table class="table table-striped my-3">
     <thead>
         <tr>
             <th scope="col">Sno</th>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
-            <th scope="col">Time</th>
+            <!-- <th scope="col">Time</th> -->
             <th scope="col">Update</th>
             <th scope="col">Delete</th>
         </tr>
     </thead>
-    c
+
+    {% for todo in alltodos %}
+    <tr>
+        <td>{{todo.sno}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.desc}}</td>
+        <td><a href="/update/{{todo.sno}}">Update</a></td>
+        <td><a href="/delete/{{todo.sno}}">Delete</a></td>
+    </tr>
+    {% endfor %}
 </table>
 {% endblock body %}
